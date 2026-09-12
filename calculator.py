@@ -15,8 +15,15 @@ while True:
 
     elif "/" in calc:
         float_num1, float_num2 = calc.split("/")
+        if float(float_num2) == 0:
+            print("Error: Division by zero is not allowed.")
+            continue
         result = float(float_num1) / float(float_num2)
-        print("Result:", result)
+    else:
+        print("Invalid calculation. Please use +, -, *, or /.")
+        continue
+
+    print("Result:", result)
 
     another_calc = input("Do you want to perform another calculation? (y/n): ")
 
